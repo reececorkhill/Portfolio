@@ -1,126 +1,137 @@
+/* Variables */
+:root {
+    --primary-color: #00ADE6;                           /* Primary Site Color.                             */
+    --primary-color-border: solid #00ADE6 3px;          /* Primary Border Color and Size.                  */
+    --body-background-color: rgb(87,86,86, 0.35);       /* Site Background Color.                          */
+    --overlay-background-color: rgb(0,173,230,0.85);    /* Overlay Background Color.                       */
+    --overlay-header-font-color: white;                 /* Overlay and Header Font Color.                  */
+    --hover-transform: scale(1.01);                       /* Hover Transform Scale.                          */
+    --primary-font-color: black;                        /* Primary content font color.                     */
+    --primary-font-size: 30px;                            /* Primary font size.                              */
+    --font-weight: bold;                                  /* Bold font weight.                               */
+    --navbar-above-content: 100;                          /* Z-index value of navbar.                        */
+    --content-above-navbar: 110;                          /* Z-index value of navbar content.                */
+    --remove-text-decoration: none;                       /* No text decoration.                             */
+    --remove-list-type-style: none;                       /* No list type style.                             */
+}
+
 * {
-    padding: 0px;
-    margin: 0px;
-    font-family: 'Urbanist';
+    padding: 0px;                                         /* Resetting padding to zero for all elements.     */
+    margin: 0px;                                          /* Resetting margin to zero for all elements.      */
+    font-family: 'Urbanist';                              /* Default font family for the entire document.    */
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;                              /* Smooth scrolling for the entire document.       */
 }
 
 body {
-    background-color: rgb(87,86,86, 0.35);
+    background-color: var(--body-background-color);       /* Background color of the body using variable.    */
 }
 
 .highlight {
-    color: #00ADE6;
+    color: var(--primary-color);                          /* Set highlight class text color using variable.  */
 }
 
 .navbar {
-    position: fixed;
-    top: 0px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: #00ADE6;
-    height: 150px;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
+    position: fixed;                                      /* Fixing the navbar at the top of the viewport.   */
+    top: 0px;                                             /* Setting top of navbar with the top of viewport. */
+    display: flex;                                        /* Flex container.                                 */
+    flex-direction: column;                               /* Flex container in a column layout.              */
+    width: 100%;                                          /* Full width of the viewport.                     */
+    background-color: var(--primary-color);               /* Background color using variable.                */
+    height: 150px;                                        /* Sets a fixed height for the navbar.             */
+    justify-content: center;                              /* Centering content horizontally.                 */
+    align-items: center;                                  /* Centering content vertically.                   */
+    z-index: var(--navbar-above-content);                 /* Stacking navbar above main content.             */
 }
   
 .navbar h1 {
-    flex-direction: row;
-    color: white;
+    flex-direction: row;                                  /* Flex container in a row layout.                 */
+    color: var(--overlay-header-font-color);              /* Applying font color using variable.             */
 }
 
 .navbar-items {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: white;
-    font-size: 30px;
-    z-index: 250;
+    display: flex;                                        /* Flex container.                                 */
+    flex-direction: row;                                  /* Flex container in a row layout.                 */
+    justify-content: center;                              /* Centering content horizontally.                 */
+    color: var(--overlay-header-font-color);              /* Applying font color using variable.             */
+    font-size: var(--primary-font-size);                  /* Applying font size using variable.              */
+    z-index: var(--content-above-navbar);                 /* Stacking navbar content above navbar.           */
 }
 
 .navbar-items li {
-    padding-top: 20px;
-    padding-inline: 10px;
+    padding-top: 20px;                                    /* Space above each list item.                     */
+    padding-inline: 10px;                                 /* Horizontal space at side of each list item.     */
 }
 
 .navbar-items ul li {
-    display: inline-block;
-    list-style-type: none;
+    display: inline-block;                                /* List items arranged horizontally.               */
+    list-style-type: var(--remove-list-type-style);       /* Remove default li styling using variable.       */
 }
 
 .navbar-items a {
-    list-style-type: none;
-    text-decoration: none;
-    color: white;
+    list-style-type: var(--remove-list-type-style);       /* Remove default a link styling using variable.   */
+    text-decoration: var(--remove-text-decoration);       /* Remove default underline using variable.        */
+    color: var(--overlay-header-font-color);              /* Applying a link font color using variable.      */
 }
 
 .hero {
-    height: auto;
-    position: relative;
-    top: 150px;
+    height: auto;                                         /* Adjust div height based on content.             */
+    position: relative;                                   /* Setting relative position to child elements.    */
+    top: 150px;                                           /* Setting top position to accomodate navbar.      */
 }
 
 .hero img {
-    object-fit: cover;
-    height: 85vh;
-    width: 100%;
-    filter: brightness(85%);
+    object-fit: cover;                                    /* Setting image to cover the container.           */
+    height: 85vh;                                         /* Setting height to 85% of the viewport height.   */
+    width: 100%;                                          /* Setting image to span full width of container.  */
+    filter: brightness(85%);                              /* Setting brightness of the image effect.         */
 }
 
 .hero-title {
-    position: relative;
-    bottom: 500px;
-    padding: 25px;
-    background-color: rgb(0,173,230,0.95);
-    text-align: center;
-    width: fit-content;
+    position: relative;                                   /* Setting relative position to element.           */
+    bottom: 500px;                                        /* Moving element pixels up from normal position.  */
+    padding: 25px;                                        /* Padding to the content inside the element.      */
+    background-color: var(--overlay-background-color);    /* Setting background color using variable.        */
+    text-align: center;                                   /* Centering text content within the element.      */
+    width: fit-content;                                   /* Adjusting width to fit the content size.        */
 }
 
 .hero-title h2 {
-    color: white;
-    font-size: 50px;
+    color: var(--overlay-header-font-color);              /* Applying font color using variable.             */
+    font-size: 50px;                                      /* Applying font size of 50px.                     */
 }
   
   
 main {
-    max-width: 100%;
-    color: black;
-    font-size: 20px;
+    max-width: 100%;                                      /* Setting max width of the main content area.     */
+    color: var(--primary-font-color);                     /* Applying font color using variable.             */
+    font-size: 20px;                                      /* Applying font size of 20px.                     */
 }
 
-main p {
-    color: black;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-main h3 {
-    color: black;
-    font-size: 30px;
-    font-weight: bold;
+main p, h3 {
+    color: var(--primary-font-color);                     /* Applying font color using variable.             */
+    font-size: var(--primary-font-size);                  /* Applying font size using variable.              */
+    font-weight: var(--font-weight);                      /* Applying font weight using variable.            */
 }
 
 .main-content {
-    display: grid;
-    grid-template-columns: 1fr repeat(2, 2fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    margin-top: -200px;
+    display: grid;                                        /* Defining grid layout for the main content area. */
+    grid-template-columns: 1fr repeat(2, 2fr);            /* Defining grid columns and size.                 */
+    grid-template-rows: repeat(4, 1fr);                   /* Defining grid rows and size.                    */
+    grid-column-gap: 0px;                                 /* Specifying gap between columns in the grid.     */
+    grid-row-gap: 0px;                                    /* Specifying gap between rows in the grid.        */
+    margin-top: -200px;                                   /* Setting position of main content area.          */
 }
 
 .hero #reece-irl {
-    position: relative;
-    bottom: 500px;
-    left: 45px;
-    height: auto;
-    width: 25vh;
-    clip-path: circle();
+    position: relative;                                   /* Setting relative position to element.           */
+    bottom: 500px;                                        /* Adjusting position from bottom by 500 pixels.   */
+    left: 45px;                                           /* Shifting element to the right by 45 pixels.     */
+    height: auto;                                         /* Adjust div height based on content.             */
+    width: 25vh;                                          /* Setting width to 85% of the viewport width.     */
+    clip-path: circle();                                  /* Clipping the element into a circular shape.     */
 }
 
 .about-left { grid-area: 1 / 1 / 2 / 2; }
@@ -162,7 +173,7 @@ main h3 {
     flex-wrap: wrap;
     flex-direction: row;
     padding-left: 20px;
-    border-left: solid #00ADE6 3px;
+    border-left: var(--primary-color-border);
 }
 
 .about-right, .showcase-right-item-2, .showcase-right-item-3 {
@@ -180,30 +191,15 @@ main h3 {
     object-fit: cover;
     height: 100%;
     width: 92.3%;
-    border: solid #00ADE6 3px;
+    border: var(--primary-color-border);
 }
 
-.showcase-right-item-1:hover {
-    -ms-transform: scale(1.01);
-    -webkit-transform: scale(1.01);
-    transform: scale(1.01); 
+.showcase-right-item-1:hover, .showcase-right-item-2:hover, .showcase-right-item-3:hover {
+    -ms-transform: var(--hover-transform);
+    -webkit-transform: var(--hover-transform);
+    transform: var(--hover-transform); 
     opacity: 85%;
 }
-
-.showcase-right-item-2:hover {
-    -ms-transform: scale(1.01);
-    -webkit-transform: scale(1.01);
-    transform: scale(1.01); 
-    opacity: 85%;
-}
-
-.showcase-right-item-3:hover {
-    -ms-transform: scale(1.01);
-    -webkit-transform: scale(1.01);
-    transform: scale(1.01); 
-    opacity: 85%;
-}
-
 
 .overlay-text {
   position: relative;
@@ -211,11 +207,11 @@ main h3 {
   left: 0.2%;
   width: fit-content;
   max-height: 45px;
-  background-color: rgb(0,173,230,0.85);
-  color: white; 
+  background-color: var(--overlay-background-color);
+  color: var(--overlay-header-font-color); 
   padding: 10px 20px; 
-  font-size: 30px; /* Change font to 20px < 600px */
-  font-weight: bold; 
+  font-size: var(--primary-font-size);
+  font-weight: var(--font-weight); 
   text-align: center;
 }
 
@@ -225,13 +221,13 @@ main h3 {
     left: 0.2%;
     width: fit-content;
     max-height: 45px;
-    background-color: rgb(0,173,230,0.85);
-    color: white; 
+    background-color: var(--overlay-background-color);
+    color: var(--overlay-header-font-color); 
     padding: 10px 20px; 
-    font-size: 30px;
-    font-weight: bold; 
+    font-size: var(--primary-font-size);
+    font-weight: var(--font-weight); 
     text-align: center;
-  }
+}
 
 .showcase-right-item-2 {
     height: auto;
@@ -247,7 +243,7 @@ main h3 {
     object-fit: cover;
     height: 100%;
     width: 85%;
-    border: solid #00ADE6 3px;
+    border: var(--primary-color-border);
 }
 
 .showcase-right-item-3 {
@@ -259,7 +255,7 @@ main h3 {
     object-fit: cover;
     height: 100%;
     width: 85%;
-    border: solid #00ADE6 3px;
+    border: var(--primary-color-border);
 }
 
 .contact-items ul li {
@@ -267,16 +263,15 @@ main h3 {
     flex-wrap: wrap;
     flex-direction: column;
     padding-left: 20px;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: var(--primary-font-size);
+    font-weight: var(--font-weight);
 }
 
 .contact-items a {
-    text-decoration: none;
-    color: #00ADE6;
-    font-weight: bold;
+    text-decoration: var(--remove-text-decoration);
+    color: var(--primary-color);
+    font-weight: var(--font-weight);
 }
-
 
 @media screen and (max-width:600px) {
 
@@ -316,13 +311,7 @@ main h3 {
         width: 92%;
     }
 
-    .showcase-right-item-2 {
-        border-left: none;
-        padding-left: 0px;
-        width: 100%;
-    }
-
-    .showcase-right-item-3 {
+    .showcase-right-item-2, .showcase-right-item-3 {
         border-left: none;
         padding-left: 0px;
         width: 100%;
@@ -339,5 +328,4 @@ main h3 {
         margin-bottom: 150px;
         height: fit-content;
     }
-
 }
