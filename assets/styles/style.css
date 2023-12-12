@@ -183,106 +183,106 @@ main p, h3 {
 .showcase-right-item-1 {
     height: auto;                                         /* Adjust div height based on content.             */
     width: auto;                                          /* Full width of the viewport.                     */
-    position: relative;                                   /* Setting relative position to elements.          */
+    position: relative;                                   /* Setting relative position to element.          */
     display: inline-block;                                /* Items arranged horizontally.                    */
 }
   
 .showcase-right-item-1 img {
-    object-fit: cover;
-    height: 100%;
-    width: 92.3%;
-    border: var(--primary-color-border);
+    object-fit: cover;                                    /* Setting image to cover the container.           */
+    height: 100%;                                         /* Adjust div height based on content.             */
+    width: 92.3%;                                         /* 92.3% width of the viewport.                    */
+    border: var(--primary-color-border);                  /* Adding border to element using variable.        */
 }
 
 .showcase-right-item-1:hover, .showcase-right-item-2:hover, .showcase-right-item-3:hover {
-    -ms-transform: var(--hover-transform);
-    -webkit-transform: var(--hover-transform);
-    transform: var(--hover-transform); 
-    opacity: 85%;
+    -ms-transform: var(--hover-transform);                /* Applies a transform on hover using variable     */
+    -webkit-transform: var(--hover-transform);            /* Applies a transform on hover using variable     */
+    transform: var(--hover-transform);                    /* Applies a transform on hover using variable     */
+    opacity: 85%;                                         /* Sets opacity to 85% on hover */
 }
 
 .overlay-text {
-  position: relative;
-  bottom: 24.25%;
-  left: 0.2%;
-  width: fit-content;
-  max-height: 45px;
-  background-color: var(--overlay-background-color);
-  color: var(--overlay-header-font-color); 
-  padding: 10px 20px; 
-  font-size: var(--primary-font-size);
-  font-weight: var(--font-weight); 
-  text-align: center;
+  position: relative;                                     /* Setting relative position to element.           */
+  bottom: 24.25%;                                         /* Adjusting position from bottom by 24.25%.       */
+  left: 0.2%;                                             /* Shifting element to the right by 0.2%.          */
+  width: fit-content;                                     /* Adjusting width to fit the content size.        */
+  max-height: 45px;                                       /* Sets the maximum height to 45 pixels.           */
+  background-color: var(--overlay-background-color);      /* Sets the background color using variable.       */
+  color: var(--overlay-header-font-color);                /* Sets the font color using a variable.           */
+  padding: 10px 20px;                                     /* Sets padding for the over text.                 */
+  font-size: var(--primary-font-size);                    /* Applying font size using variable.              */
+  font-weight: var(--font-weight);                        /* Applying font weight using variable.            */
+  text-align: center;                                     /* Centering text content within the element.      */
 }
 
 #horiseon {
-    position: relative;
-    bottom: 20.6%;
-    left: 0.2%;
-    width: fit-content;
-    max-height: 45px;
-    background-color: var(--overlay-background-color);
-    color: var(--overlay-header-font-color); 
-    padding: 10px 20px; 
-    font-size: var(--primary-font-size);
-    font-weight: var(--font-weight); 
-    text-align: center;
+    position: relative;                                   /* Setting relative position to element.           */
+    bottom: 20.6%;                                        /* Adjusting position from bottom by 20.6%.        */
+    left: 0.2%;                                           /* Shifting element to the right by 0.2%.          */
+    width: fit-content;                                   /* Adjusting width to fit the content size.        */
+    max-height: 45px;                                     /* Sets the maximum height to 45 pixels.           */
+    background-color: var(--overlay-background-color);    /* Sets the background color using variable.       */
+    color: var(--overlay-header-font-color);              /* Sets the font color using a variable.           */
+    padding: 10px 20px;                                   /* Sets padding for the over text.                 */
+    font-size: var(--primary-font-size);                  /* Applying font size using variable.              */
+    font-weight: var(--font-weight);                      /* Applying font weight using variable.            */
+    text-align: center;                                   /* Centering text content within the element.      */
 }
 
 .showcase-right-item-2 {
-    height: auto;
-    width: 100%;
+    height: auto;                                         /* Adjust div height based on content.             */
+    width: 100%;                                          /* Sets the width to 100% of the container.        */
 }
 
 .showcase-right-item-2 a {
-    width: 100%;
-    height: 100%;
+    width: 100%;                                          /* Sets the width to 100% of the container.        */
+    height: 100%;                                         /* Sets the height to 100% of the container.       */
 }
 
 .showcase-right-item-2 img {
-    object-fit: cover;
-    height: 100%;
-    width: 85%;
-    border: var(--primary-color-border);
+    object-fit: cover;                                    /* Setting image to cover the container.           */
+    height: 100%;                                         /* Adjust div height based on content.             */
+    width: 85%;                                           /* 85% width of the viewport.                      */
+    border: var(--primary-color-border);                  /* Adding border to element using variable.        */
 }
 
 .showcase-right-item-3 {
-    height: auto;
-    width: 100%;
+    height: auto;                                         /* Adjust div height based on content.             */
+    width: 100%;                                          /* Sets the width to 100% of the container.        */
 }
   
 .showcase-right-item-3 img {
-    object-fit: cover;
-    height: 100%;
-    width: 85%;
-    border: var(--primary-color-border);
+    object-fit: cover;                                    /* Setting image to cover the container.           */
+    height: 100%;                                         /* Adjust div height based on content.             */
+    width: 85%;                                           /* 85% width of the viewport.                      */
+    border: var(--primary-color-border);                  /* Adding border to element using variable.        */
 }
 
 .contact-items ul li {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding-left: 20px;
-    font-size: var(--primary-font-size);
-    font-weight: var(--font-weight);
+    display: flex;                                        /* Flex container.                                 */
+    flex-wrap: wrap;                                      /* Allowing items to wrap to next line if needed.  */
+    flex-direction: column;                               /* Flex container in a column layout.              */
+    padding-left: 20px;                                   /* Adds left padding of 20 pixels.                 */
+    font-size: var(--primary-font-size);                  /* Applying font size using variable.              */
+    font-weight: var(--font-weight);                      /* Applying font weight using variable.            */
 }
 
 .contact-items a {
-    text-decoration: var(--remove-text-decoration);
-    color: var(--primary-color);
-    font-weight: var(--font-weight);
+    text-decoration: var(--remove-text-decoration);       /* Remove default underline using variable.        */
+    color: var(--primary-color);                          /* Background color using variable.                */
+    font-weight: var(--font-weight);                      /* Applying font weight using variable.            */
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:600px) {                     /* For screens with a maximum width of 600 pixels. */
 
-    .main-content {
+    .main-content {                                       /* Displays grid with column and row layouts.      */
         display: grid;
         grid-template-columns: 1fr 3fr;
         grid-template-rows: repeat(5, 0.6fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
-
+    /* Grid area definitions for different sections within the media query */
     .about-left { grid-area: 1 / 1 / 2 / 2; }
     .about-right { grid-area: 1 / 2 / 2 / 3; }
     .showcase-left { grid-area: 2 / 1 / 5 / 2; }
@@ -292,40 +292,41 @@ main p, h3 {
     .contact-left { grid-area: 5 / 1 / 6 / 2; }
     .contact-right { grid-area: 5 / 2 / 6 / 3; }
 
-    .about-left, .showcase-left, .contact-left {
+    .about-left, .showcase-left, .contact-left {          /* Text alignment for specific sections.          */
         text-align: center;
     }
 
-    .main-content div {
+    .main-content div {                                   /* Height for all divs within media query.        */
         height: 95%;
     }
 
-    .about-right {
+    .about-right {                                        /* Styling for the .about-right section.          */
         margin-bottom: 250px;
         border-left: none;
     }
 
-    .showcase-right-item-1 {
+    .showcase-right-item-1 {                              /* Styling for .showcase-right-item-1 section.    */
         border-left: none;
         padding-left: 0px;
         width: 92%;
     }
 
-    .showcase-right-item-2, .showcase-right-item-3 {
+    .showcase-right-item-2, .showcase-right-item-3 {      /* Styling for .showcase-right-item-2 and 3.      */
         border-left: none;
         padding-left: 0px;
         width: 100%;
     }
 
-    .contact-left, .contact-right {
+    .contact-left, .contact-right {                       /* Styling for .contact-left and .contact-right.  */
         border-left: none;
         margin-top: 250px;
     }
 }
 
-@media screen and (max-width:1782px) {
+@media screen and (max-width:1782px) {                   /* For screens with a maximum width of 1782 pixels. */ 
+    
     .about-right {
         margin-bottom: 150px;
-        height: fit-content;
+        height: fit-content;                            /* Adjusts height to fit content.                    */
     }
 }
